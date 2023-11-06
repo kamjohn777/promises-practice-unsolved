@@ -16,6 +16,40 @@
 
 // Your code goes here
 
+// function practicePromise() {
+//     return new Promise((res, rej) => {
+//      setTimeout(() => { 
+//         const operationSuccessful = true;
+
+//         if (operationSuccessful) {
+//             res('Worked');
+//         } else {
+//             rej(new Error('Failed'));
+//         }
+//     }, 2000);
+//  });
+// }
+
+// practicePromise()
+// .then(res => {
+//     console.log(res);
+// })
+// .catch(rej => {
+//     console.log(rej);
+// })
+
+
+export const getPromise = new Promise((res, rej) => {
+    setTimeout(() => {
+        res('The PROMISE was RESOLVED');
+    }, 2000);
+});
+
+getPromise.then(res => {
+    console.log(res);
+    return res;
+});
+
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-1"
 // If the test has all tests passed, switch to the next exercise file
